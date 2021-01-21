@@ -5,28 +5,24 @@
 class GoreleaserTest < Formula
   desc "Test creating a Homebrew tap with goreleaser."
   homepage "https://github.com/cpliakas/goreleaser-test"
-  version "0.1.3"
+  version "0.1.5"
   license "MIT"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/cpliakas/goreleaser-test/releases/download/v0.1.3/goreleaser-test_0.1.3_Darwin_x86_64.tar.gz"
-    sha256 "739b449dcda283dff253a94e6ea6a80e63993ae2996a492d1399e161d53c20ba"
+    url "https://github.com/cpliakas/goreleaser-test/releases/download/v0.1.5/goreleaser-test_0.1.5_Darwin_x86_64.tar.gz"
+    sha256 "675ba3f7f58a66222077e2beb6b532a309863597da5d8e36241605dccd1383d3"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/cpliakas/goreleaser-test/releases/download/v0.1.3/goreleaser-test_0.1.3_Linux_x86_64.tar.gz"
-    sha256 "82875b0f04aafd3e7278d44018983b508bd9853565cde9a2843364f9c8d2694b"
+    url "https://github.com/cpliakas/goreleaser-test/releases/download/v0.1.5/goreleaser-test_0.1.5_Linux_x86_64.tar.gz"
+    sha256 "f2ba1ed73adcf0a80f0c6dc086f4491e14a7fd56080f05fefa7f3a8ba1a0af36"
   end
   if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/cpliakas/goreleaser-test/releases/download/v0.1.3/goreleaser-test_0.1.3_Linux_arm64.tar.gz"
-    sha256 "6090e191150ae48e3ab9495e0d3b8e970e950a12bdba00c3861112243eb817bf"
+    url "https://github.com/cpliakas/goreleaser-test/releases/download/v0.1.5/goreleaser-test_0.1.5_Linux_arm64.tar.gz"
+    sha256 "fd336f062dba2cc98c21ecb7e00a3ee9003ae2fffb6fb7139b4a01bcb9954ff7"
   end
 
   def install
     bin.install "goreleaser-test"
-  end
-
-  test do
-    system "#{bin}/goreleaser-test"
   end
 end
